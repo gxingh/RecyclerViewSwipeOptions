@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/foreground"
+        android:visibility="visible"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@color/colorAccent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="80dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:layout_marginTop="10dp"
+                android:text="Best article ever"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="nytimes.com"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:weightSum="5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="2"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="3"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="4"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:id="@+id/close"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="X"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="79dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#a9a9a9"/>
+</FrameLayout>
