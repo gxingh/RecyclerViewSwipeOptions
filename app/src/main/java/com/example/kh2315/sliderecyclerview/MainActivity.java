@@ -56,8 +56,12 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
-                adapter.showMenu(viewHolder.getAdapterPosition());
+            public void onSwiped(final RecyclerView.ViewHolder viewHolder, int direction) {
+                recyclerView.post(new Runnable() {
+                    public void run() {
+                        adapter.showMenu(viewHolder.getAdapterPosition());
+                    }
+                });
             }
 
             @Override
@@ -83,7 +87,11 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setOnScrollChangeListener(new View.OnScrollChangeListener() {
             @Override
             public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                adapter.closeMenu();
+                recyclerView.post(new Runnable() {
+                    public void run() {
+                        adapter.closeMenu();
+                    }
+                });
             }
         });
     }
